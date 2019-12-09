@@ -19,7 +19,7 @@ LOAD DATA INPATH '/NYC/NewYorkCombined.csv' OVERWRITE INTO TABLE tickets;
 /* add a new column in the tickets table*/
 ALTER TABLE tickets ADD COLUMNS (location_state string);	
 
-/*/* table schema for concatenation*/
+/*second run to test concatenation
 
 CREATE TABLE IF NOT EXISTS ticketsv2
 (summons_number int, plate_id string, registration_state string, plate_type string, issue_date date, violation_code int, vehicle_body_type string, vehicle_make string, issuing_agency string, street_code1 int, street_code2 int, street_code3 int,
