@@ -31,7 +31,7 @@ ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 STORED AS TEXTFILE
 LOCATION "/Output/ticketsv2/";
-/*write data from first table while concatenating two columns and populating the new column with a case statement*/
+//write data from first table while concatenating two columns and populating the new column with a case statement
 INSERT OVERWRITE TABLE ticketsv2
 SELECT summons_number, plate_id, registration_state, plate_type, issue_date, violation_code, vehicle_body_type, vehicle_make, issuing_agency, street_code1, street_code2, street_code3,
 vehicle_expiration_date, violation_location, violation_precinct, issuer_precinct, issuer_Code, issuer_command, issuer_squad, violation_time, time_first_observed, violation_county,
