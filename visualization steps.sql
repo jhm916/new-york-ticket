@@ -35,3 +35,8 @@ violation_in_front_of_or_opposite, CONCAT(house_number,' ',street_name,' ', case
  sub_division, violation_legal_code, days_parking_in_effect,from_hours_in_effect, to_hours_in_effect, vehicle_color, unregistered_vehicle, vehicle_year, meter_number, feet_from_curb, violation_post_code, violation_description,
 no_standing_or_stopping_violation, hydrant_violation, double_parking_violation
 FROM tickets;
+
+/* move file from hdfs onto master node */
+hdfs dfs -get /Output/ticketsfinal/000000_0 TicketsFinal.csv
+/* download syntax using pscp*/
+pscp -i C:/Users/Jihyun/Documents/jihyunssh.ppk Jihyun@34.67.78.107:TicketsFinal.csv .
